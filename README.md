@@ -32,8 +32,11 @@ DevilYuan股票量化系统由python编写，支持python3.4及以上版本，�
 ![image](https://github.com/moyuanz/DevilYuan/blob/master/docs/main.png)
 
 # 运行前的准备
+- 便捷环境配置，如果这步没有出错的话后面可以不用看。
+    - 在Anaconda中新建一个环境名字随意，找到对应的环境目录，把打包好的环境解压缩到里面，环境下载地址在[这里](https://pan.baidu.com/s/1YxnB8L1E_nVWMtLpEdZYRA)提取码：3rmb
+
 - 支持的操作系统：Windows 7/8/10, Linux(不支持实盘)
-- 安装[Anaconda](https://www.anaconda.com/download/)，python3.4及以上版本 64位版本(32位应该也可以，但没测试过)
+- 安装[Anaconda](https://www.anaconda.com/download/)，python3.4及以上版本,3.7.4以下版本，3.7.6会出现未知错误 64位版本(32位应该也可以，但没测试过)
     - 最新版的Anaconda可能会不太稳定，同时DevilYuan也没有在最新的Anaconda上测试过，建议安装[老版本的Anaconda](https://repo.anaconda.com/archive/)，比如Anaconda3-5.x.x系列，或者Anaconda3-4.x.x系列
 - 安装[MongoDB](https://www.mongodb.com/download-center#production)，并将[MongoDB配置为系统服务](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/#configure-a-windows-service-for-mongodb-community-edition)
     -  如果你想下载更多的个股历史分笔数据，建议配备比较大的的硬盘。毛估估，现在一年的全市场个股分笔数据可能有80G左右。
@@ -60,6 +63,7 @@ DevilYuan股票量化系统由python编写，支持python3.4及以上版本，�
 - 安装[Vistual Studio社区版](https://www.visualstudio.com/zh-hans/)，并勾选Python插件 **(可选)**
     - 本项目是用VS2017开发的。你可以选择是用VS2017，或者用其他IDE 
 - 需要安装的Python包
+    - pip install -r requirements.txt
     - tushare
     - pytdx
         - 由于tushare可能包含老版本的pytdx，请先`pip uninstall pytdx`，然后再`pip install pytdx`
@@ -96,6 +100,8 @@ DevilYuan股票量化系统由python编写，支持python3.4及以上版本，�
 - VS调试时报异常的包，不调试时不会报错，可选安装
     - datrie
     - crypto
+        - 如果安装出现错误，请到微软的网址上面[https://visualstudio.microsoft.com/zh-hans/downloads/](https://visualstudio.microsoft.com/zh-hans/downloads/)，
+        下载[Microsoft Visual C++ Redistributable for Visual Studio 2019](https://aka.ms/vs/16/release/VC_redist.x64.exe)
     - gunicorn
 
 # 安装Q&A
